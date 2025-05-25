@@ -25,3 +25,13 @@ The model follows the standard sequence-to-sequence structure:
 encoder_inputs = Input(shape=(None, num_encoder_tokens))
 encoder = LSTM(latent_dim, return_state=True)
 encoder_outputs, state_h, state_c = encoder(encoder_inputs)
+
+
+
+## 📸 Screenshots
+
+### Training Output
+![Training Output](training_output.png)
+
+### Translation Example
+![Translation Example](translation_example.png)
