@@ -1,4 +1,4 @@
-# Neural Machine Translation (NMT) - English to French 🇬🇧➡️🇫🇷
+# Neural Machine Translation (NMT) - English to French 
 
 This project implements a basic **Neural Machine Translation (NMT)** model using TensorFlow and NumPy. It demonstrates how to train an encoder-decoder model that translates simple English phrases into French.
 
