@@ -14,6 +14,14 @@ This notebook demonstrates:
 
 ---
 
+## 📸 Screenshots
+
+### Training Output
+![Training Output](training_output.png)
+
+### Translation Example
+![Translation Example](translation_example.png)
+
 ## 🧠 Model Architecture
 
 The model follows the standard sequence-to-sequence structure:
@@ -28,10 +36,4 @@ encoder_outputs, state_h, state_c = encoder(encoder_inputs)
 
 
 
-## 📸 Screenshots
 
-### Training Output
-![Training Output](training_output.png)
-
-### Translation Example
-![Translation Example](translation_example.png)
