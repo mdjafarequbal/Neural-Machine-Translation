@@ -20,7 +20,7 @@ This project includes:
 
 ```
 .
-├── NMT_Project_Clean.ipynb     # Jupyter notebook with all code and output
+├── NMT_Project.ipynb           # Jupyter notebook with all code and output
 ├── training_output.png         # Screenshot of model training
 ├── translation_example.png     # Screenshot of sample translation
 └── README.md                   # Project documentation
@@ -45,20 +45,7 @@ The decoder uses the last encoder state as its initial state.
 
 ---
 
-## ⚙️ Setup and Installation
 
-Install dependencies using pip:
-
-```bash
-pip install tensorflow numpy
-```
-
-Run the notebook:
-1. Open `NMT_Project_Clean.ipynb` in Jupyter or Google Colab.
-2. Execute all cells in sequence.
-3. Modify the test input to try new translations.
-
----
 
 ## 🚀 How It Works
 
