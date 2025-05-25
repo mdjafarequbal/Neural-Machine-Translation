@@ -30,7 +30,7 @@ This project includes:
 
 ## 🧠 Model Architecture
 
-We use a simple **sequence-to-sequence** (seq2seq) architecture based on LSTMs.
+Used a simple **sequence-to-sequence** (seq2seq) architecture based on LSTMs.
 
 - **Encoder**: Processes the input sentence and encodes it into a fixed-length vector.
 - **Decoder**: Takes this vector and generates the output sentence one token at a time.
