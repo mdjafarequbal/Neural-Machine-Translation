@@ -4,7 +4,7 @@ This project demonstrates a basic **Neural Machine Translation (NMT)** system us
 
 ---
 
-## 📖 Overview
+##  Overview
 
 Neural Machine Translation has revolutionized how machines understand and generate human languages. In this project, we build a basic NMT system from scratch to translate English to French.
 
@@ -16,7 +16,7 @@ This project includes:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 .
@@ -28,7 +28,7 @@ This project includes:
 
 ---
 
-## 🧠 Model Architecture
+##  Model Architecture
 
 Used a simple **sequence-to-sequence** (seq2seq) architecture based on LSTMs.
 
@@ -47,7 +47,7 @@ The decoder uses the last encoder state as its initial state.
 
 
 
-## 🚀 How It Works
+##  How It Works
 
 - We define a small parallel corpus of English-French sentence pairs.
 - Each sentence is tokenized at the character level.
@@ -57,7 +57,7 @@ The decoder uses the last encoder state as its initial state.
 
 ---
 
-## 💬 Sample Translation
+##  Sample Translation
 
 Here’s an example of how the system translates:
 
@@ -76,7 +76,7 @@ French: bonjour
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Training Output
 ![Training Output](training_output.png)
