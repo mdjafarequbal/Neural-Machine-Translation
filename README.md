@@ -1,16 +1,91 @@
 # Neural Machine Translation (NMT) - English to French 
 
-This project implements a basic **Neural Machine Translation (NMT)** model using TensorFlow and NumPy. It demonstrates how to train an encoder-decoder model that translates simple English phrases into French.
+This project demonstrates a basic **Neural Machine Translation (NMT)** system using **TensorFlow** and **NumPy**. It covers the core concepts of building and training an **encoder-decoder** model to translate simple English sentences into French.
 
 ---
 
 ## 📖 Overview
 
-This notebook demonstrates:
-- Tokenizing and preparing sequence data
-- Building an encoder-decoder architecture with LSTM layers
-- Training the model on paired English-French sentences
-- Using the trained model for inference to translate new inputs
+Neural Machine Translation has revolutionized how machines understand and generate human languages. In this project, we build a basic NMT system from scratch to translate English to French.
+
+This project includes:
+- Preprocessing and vectorizing sentence pairs
+- Implementing an encoder-decoder model with LSTM
+- Training and evaluating the model
+- Performing inference to generate translations
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── NMT_Project_Clean.ipynb     # Jupyter notebook with all code and output
+├── training_output.png         # Screenshot of model training
+├── translation_example.png     # Screenshot of sample translation
+└── README.md                   # Project documentation
+```
+
+---
+
+## 🧠 Model Architecture
+
+We use a simple **sequence-to-sequence** (seq2seq) architecture based on LSTMs.
+
+- **Encoder**: Processes the input sentence and encodes it into a fixed-length vector.
+- **Decoder**: Takes this vector and generates the output sentence one token at a time.
+
+```python
+encoder_inputs = Input(shape=(None, num_encoder_tokens))
+encoder = LSTM(latent_dim, return_state=True)
+encoder_outputs, state_h, state_c = encoder(encoder_inputs)
+```
+
+The decoder uses the last encoder state as its initial state.
+
+---
+
+## ⚙️ Setup and Installation
+
+Install dependencies using pip:
+
+```bash
+pip install tensorflow numpy
+```
+
+Run the notebook:
+1. Open `NMT_Project_Clean.ipynb` in Jupyter or Google Colab.
+2. Execute all cells in sequence.
+3. Modify the test input to try new translations.
+
+---
+
+## 🚀 How It Works
+
+- We define a small parallel corpus of English-French sentence pairs.
+- Each sentence is tokenized at the character level.
+- Input and target sequences are one-hot encoded.
+- An LSTM encoder processes the English input.
+- A decoder LSTM generates the French output step by step.
+
+---
+
+## 💬 Sample Translation
+
+Here’s an example of how the system translates:
+
+```python
+user_input = "hello"
+input_seq = encode_input_text(user_input.lower())
+print("English:", user_input)
+print("French:", decode_sequence(input_seq))
+```
+
+**Output:**
+```
+English: hello
+French: bonjour
+```
 
 ---
 
@@ -22,17 +97,6 @@ This notebook demonstrates:
 ### Translation Example
 ![Translation Example](translation_example.png)
 
-## 🧠 Model Architecture
-
-The model follows the standard sequence-to-sequence structure:
-
-- **Encoder**: Embeds the English sentence into a context vector using LSTM.
-- **Decoder**: Takes this context and generates the French sentence.
-
-```python
-encoder_inputs = Input(shape=(None, num_encoder_tokens))
-encoder = LSTM(latent_dim, return_state=True)
-encoder_outputs, state_h, state_c = encoder(encoder_inputs)
 
 
 
